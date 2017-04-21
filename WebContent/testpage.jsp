@@ -13,11 +13,6 @@
 	<jsp:include page="index.jsp" />
 </c:if>
 <c:if test="${member != null}">
-<script type="text/javascript">
-nextQuestion(){
-	index++;
-}
-</script>
 	<body>
 		<jsp:useBean id="qs" class="com.onlineExamination.beans.QuestionSet"
 			scope="session" />
@@ -52,8 +47,7 @@ nextQuestion(){
 					</c:forEach>
 					<tr>
 
-						<td><input type="button" value="Next" name="NextButton"
-							onclick="nextQuestion()" /></td>
+						<td><input type="button" value="Next" name="NextButton"/></td>
 						<td><input type="submit" value="Submit" name="action" /></td>
 
 					</tr>
