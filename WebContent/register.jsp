@@ -20,9 +20,8 @@
 				<input type="text" placeholder="Email Id" name="email"></input> <input
 					type="text" placeholder="Name" name="name"></input> <select
 					name="type">
-					<option value="Candidate" selected>Candidate</option>
-					<option value="Reviewer">Reviewer</option>
-					<option value="PaperSetter">Paper Setter</option>
+					<option value="Admin" selected>Admin</option>
+					<option value="Candidate">Candidate</option>
 				</select> <input type="password" placeholder="Password" name="password"></input>
 				<input type="password" placeholder="Re-enter Password"></input>
 				<button type="submit" id="register-button" name="action"

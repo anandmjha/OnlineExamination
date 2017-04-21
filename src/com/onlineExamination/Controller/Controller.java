@@ -81,15 +81,12 @@ public class Controller extends HttpServlet {
 				System.out.println(mb.getType());
 				hs.setAttribute("memberType", memberType);
 				System.out.println(memberType);
-				if (member.getType().equalsIgnoreCase("candidate")) {
+				if (member.getType().equalsIgnoreCase("Candidate")) {
 					request.getSession().setAttribute("username", username);
 					rd = request.getRequestDispatcher("userdashboard.jsp");
-				} else if (member.getType().equalsIgnoreCase("reviewer")) {
+				}else if (member.getType().equalsIgnoreCase("Admin")) {
 					request.getSession().setAttribute("username", username);
-					rd = request.getRequestDispatcher("examinerdashboard.jsp");
-				} else if (member.getType().equalsIgnoreCase("paperSetter")) {
-					request.getSession().setAttribute("username", username);
-					rd = request.getRequestDispatcher("examinerdashboard.jsp");
+					rd = request.getRequestDispatcher("admindashboard.jsp");
 				}
 			} else
 				rd = request.getRequestDispatcher("loginerror.jsp");
